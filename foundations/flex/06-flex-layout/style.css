@@ -2,9 +2,26 @@
 
 body {
   height: 100vh;
-  margin: 0;
+  margin: 0px;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(37, 31, 31)
+}
+
+a:hover {
+  color: rgb(211, 151, 49);
 }
 
 img {
@@ -13,14 +30,75 @@ img {
 
 button {
   font-family: Roboto, sans-serif;
-  border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 6px;
+  cursor: pointer;
 }
 
+
 input {
-  border: 1px solid #ddd;
+  display: flex;
+  border: 1px solid rgb(211, 151, 49);
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.buttons {
+  display: flex;
+  flex: 0 1 auto; 
+  justify-content: center;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  padding: 16px;
+  max-height: fit-content;
+  background-color: oklch(0.278 0.033 256.848);  ;
+}
+
+.header a {
+  color: white;
+}
+
+.left-links {
+  gap: 8px;
+  display: flex;
+  flex: auto;
+  justify-content: flex-start;
+  align-items:center;  
+}
+
+.right-links {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 60 100 auto;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+ 
+}
+
+.footer {
+  background-color: lightgray;
+  padding: 16px;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  
 }
